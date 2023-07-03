@@ -19,7 +19,7 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--white);
     background-color: var(--white);
-    min-height: 20000px;
+    /* min-height: 20000px; */
 }
 
 html{
@@ -283,33 +283,24 @@ i {
     display: flex;
 }
 
+/* About Me */
+
 .about .about-content{
     width: 80%;
     margin: 7% 1% 7% 7%;
     padding: 3% 5%;
     border-radius: 2rem;
     outline: 3px solid var(--bg);
-    box-shadow: 1px 1px 20px var(--primary);
-    background-color: var(--bg);
-}
-
-.about .about-skills{
-    width: 20%;
-    height: 537px;
-    margin: 7% 7% 7% 1%;
-    padding: 3% 5%;
-    border-radius: 2rem;
-    outline: 3px solid var(--bg);
-    box-shadow: 1px 1px 20px var(--primary);
+    box-shadow: 1px 1px 10px var(--primary);
     background-color: var(--bg);
 }
 
 .about .about-content .abouth4{
-    color: var(--bg);
+    color: var(--primary);
     font-size: 2em;
     text-align: center;
     padding-bottom: 0.8rem;
-    text-shadow: 0px -5px 2px var(--primary);
+    text-shadow: 0px -4px 5px #665200;
 }
 
 .about .about-content .aboutp{
@@ -318,97 +309,123 @@ i {
     font-size: 0.9em;
 }
 
+/* --Content Education and Experience */
+
 .about .about-content .content{
     display: flex;
 }
 
-.about .content .solid{
-    height: 100%;
-    width: 0.5rem;
-    background-color: var(--bg);
-    border-radius: 1rem;
-}
+/* Education */
 
-.about .content .solid h1{
-    color: var(--bg);
-}
-
-.about .content .c-p1{
-    width: 50%;
-    text-align: right;
-    list-style-position: inside;
-}
-
-.about .content .c-p1 h4{
-    padding: 1rem 1rem 0.8rem 1rem;
-}
-
-.about .content .c-p1 .list-all{
-    display: flex;
-    flex-direction: row-reverse;
-    /* text-align: right; */
-}
-
-.about .content .c-p1 .list-all .listdisc ul li{
-    color: var(--bg);
-    font-weight: bolder;
-    padding-left: 1rem;
-}
-
-.about .content .c-p1 .list-all .isi-list-disc ul li{
-    list-style-type: none;
-    font-weight: bolder;
-}
-
-.about .content .c-p1 .list-all .isi-list-disc ul li{
-    color: var(--bg);
-}
-
-.about .content .c-p2{
+.about .content .education{
     width: 50%;
     padding: 1rem;
     text-align: left;
     list-style-position: outside;
+
+    border-left: 3.5px solid var(--darkprimary);
+    padding-left: 2rem;
 }
 
-.about .content .c-p2 ul{
-    margin-left: 1rem;
-}
-
-.about .content .c-p2 li{
-    color: var(--bg);
+.about .content .education li{
+    color: var(--darkprimary);
     font-weight: bolder;
 }
 
-.about .content .c-p2 ul p span:hover {
-    text-decoration: underline #cc0000 1px;
+.about .content .education a:hover{
+    color: #e60000;
+}
+
+/* Experience */
+
+.about .content .experience{
+    width: 50%;
+    padding: 1rem;
+    text-align: left;
+    list-style-position: outside;
+
+    border-left: 3.5px solid var(--darkprimary);
+    padding-left: 2rem;
+}
+
+.about .content .experience li{
+    color: var(--darkprimary);
+    font-weight: bolder;
+}
+
+.about .content .experience a:hover{
+    color: #e60000;
+}
+
+/* All content h4 n p */
+
+.about .content ul {
+    margin-bottom: 0.5rem;
 }
 
 .about .content h4{
-    color: var(--bg);
+    color: var(--darkprimary);
     font-size: 1.5em;
+    text-shadow: 0px -4px 5px #665200;
     padding-bottom: 0.8rem;
-}
-
-.about .content .c-p1 h4{
-    text-shadow: -5px 3px 1px var(--primary);
-}
-
-.about .content .c-p2 h4{
-    text-shadow: 5px 3px 1px var(--primary);
 }
 
 .about .content p{
     font-size: 0.9em;
 }
 
+/* --Skills Icon */
+
+.about .about-skills{
+    width: 20%;
+    height: 537px;
+    margin: 7% 7% 7% 1%;
+    padding: 3% 5%;
+    border-radius: 2rem;
+    outline: 3px solid var(--bg);
+    box-shadow: 1px 1px 10px var(--primary);
+    background-color: var(--bg);
+}
+
 .about .about-skills h4{
-    color: var(--bg);
+    color: var(--primary);
     font-size: 2em;
     padding-bottom: 0.8rem;
-    text-shadow: 0px -5px 2px var(--primary);
+    text-shadow: 0px -4px 5px #665200;
     text-align: center;
 }
+
+.about .about-skills .skills-icon {
+    text-align: center;
+}
+
+.about .about-skills .skills-icon .skills-icon-html{
+    fill: #ff5900;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.about .about-skills .skills-icon .skills-icon-css{
+    fill: #2766d3;
+    margin-bottom: 1rem;
+}
+
+.about .about-skills .skills-icon .skills-icon-java{
+    fill: #fff;
+    margin-bottom: 1rem;
+}
+
+.about .about-skills .skills-icon .skills-icon-php{
+    fill: #fff;
+    margin-bottom: 1rem;
+}
+
+.about .about-skills .skills-icon .skills-icon-laravel{
+    fill: #ff1f1f;
+    margin-bottom: 1rem;
+}
+
+
 /* Section About End */
 
 /* ========================================================================================================== */
