@@ -1,0 +1,423 @@
+:root{
+    --primary: #ffcc00;
+    --darkprimary: #cca300;
+    --bg: #252525;
+    --white: #eaeaea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    text-decoration: none;
+    color: var(--white);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--white);
+    background-color: var(--white);
+    min-height: 20000px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navbar Start */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 7%;
+    background-color: rgba(37, 37, 37, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.navbar h3 a {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 1.3em;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: var(--white);
+    margin: 0 0.6rem;
+    font-size: small;
+    display: inline-block;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after{
+    content: "";
+    display: block;
+    padding-bottom: 0, 5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+/* Navbar End */
+
+/* ==================================================================================== */
+
+/* Section Home Start */
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url(img/bg-pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home .content{
+    width: 50%;
+    padding-left: 7%;
+}
+
+.home .content .title .p{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.home .content .title h2{
+    font-size: 4.5em;
+    text-shadow: 5px 3px 1px var(--darkprimary);
+    line-height: 1;
+    /* transition: 0.5s; */
+}
+
+/* .home .content .title h2:hover{
+    font-size: 4.7em;
+} */
+
+.home .content .title h4{
+    font-size: 1.3em;
+}
+
+.home .content .title h4 a {
+    color: var(--darkprimary);
+}
+
+.home .content .title .p2{
+    margin-top: 0.5rem;
+}
+
+/* icon */
+
+/* 
+i {
+    color: #252525;
+}
+
+.home .content .title .icon{
+    display: flex;
+}
+
+.home .content .title .icon .instagram {
+    background-color: var(--bg);
+} */
+
+  .clip {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  .svg--source {
+    display: none
+  }
+  
+  .svg--icon {
+    width: 100%;
+    max-width: 2.5rem;
+    height: 100%;
+    max-height: 2.5rem;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+    fill: currentColor
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1.5rem;
+    /* justify-content: center; */
+    /* padding: 1rem; */
+  }
+  
+  .share {
+    width: 2.5rem;
+    height: 2.5rem;
+    float: left;
+    margin: .5rem 1rem .5rem 0;
+    color: #353c4a;
+    border: .125rem solid #f3f3f3;
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+    border-radius: 50%;
+    transition: 250ms;
+    position: relative;
+    
+    &:last-child {
+      margin-right: 0
+    }
+    
+    &:hover,&:focus {
+      background: var(--bg);
+    }
+    
+    &:focus {
+      outline-color: inherit;
+    }
+  }
+  
+  .icons {
+    &:hover,
+    &:focus {
+      color: var(--primary);
+      box-shadow: 0 0 15px 0 var(--primary)
+    }
+  }
+
+
+/* Image */
+
+.home .image{
+    width: 50%;
+}
+
+.home .image .kotak{
+    width: 500px;
+    margin: 0 auto;
+}
+
+.home .image .kotak .kotak1{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden; 
+    border-radius: 50%; 
+    border: 8px double var(--darkprimary);
+}
+
+.home .image .kotak .kotak1 .kotak2{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home .image .kotak .kotak1 .kotak2 img{
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+    width: 500px;
+}
+
+.home .image .kotak .kotak1:hover .kotak2 img{
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+/* .home .image .kotak img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 8px double var(--darkprimary);
+    border-spacing: 5px;
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+
+.home .image .kotak{
+
+}
+
+.home .image .kotak img:hover {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+  } */
+
+/* Section Home End */
+
+/* ========================================================================================================== */
+
+/* Section About Start */
+
+.about {
+    background-image: url(img/bg-pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: 1rem;
+    display: flex;
+}
+
+.about .about-content{
+    width: 80%;
+    margin: 7% 1% 7% 7%;
+    padding: 3% 5%;
+    border-radius: 2rem;
+    outline: 3px solid var(--bg);
+    box-shadow: 1px 1px 20px var(--primary);
+    background-color: var(--bg);
+}
+
+.about .about-skills{
+    width: 20%;
+    height: 537px;
+    margin: 7% 7% 7% 1%;
+    padding: 3% 5%;
+    border-radius: 2rem;
+    outline: 3px solid var(--bg);
+    box-shadow: 1px 1px 20px var(--primary);
+    background-color: var(--bg);
+}
+
+.about .about-content .abouth4{
+    color: var(--bg);
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0.8rem;
+    text-shadow: 0px -5px 2px var(--primary);
+}
+
+.about .about-content .aboutp{
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 0.9em;
+}
+
+.about .about-content .content{
+    display: flex;
+}
+
+.about .content .solid{
+    height: 100%;
+    width: 0.5rem;
+    background-color: var(--bg);
+    border-radius: 1rem;
+}
+
+.about .content .solid h1{
+    color: var(--bg);
+}
+
+.about .content .c-p1{
+    width: 50%;
+    text-align: right;
+    list-style-position: inside;
+}
+
+.about .content .c-p1 h4{
+    padding: 1rem 1rem 0.8rem 1rem;
+}
+
+.about .content .c-p1 .list-all{
+    display: flex;
+    flex-direction: row-reverse;
+    /* text-align: right; */
+}
+
+.about .content .c-p1 .list-all .listdisc ul li{
+    color: var(--bg);
+    font-weight: bolder;
+    padding-left: 1rem;
+}
+
+.about .content .c-p1 .list-all .isi-list-disc ul li{
+    list-style-type: none;
+    font-weight: bolder;
+}
+
+.about .content .c-p1 .list-all .isi-list-disc ul li{
+    color: var(--bg);
+}
+
+.about .content .c-p2{
+    width: 50%;
+    padding: 1rem;
+    text-align: left;
+    list-style-position: outside;
+}
+
+.about .content .c-p2 ul{
+    margin-left: 1rem;
+}
+
+.about .content .c-p2 li{
+    color: var(--bg);
+    font-weight: bolder;
+}
+
+.about .content .c-p2 ul p span:hover {
+    text-decoration: underline #cc0000 1px;
+}
+
+.about .content h4{
+    color: var(--bg);
+    font-size: 1.5em;
+    padding-bottom: 0.8rem;
+}
+
+.about .content .c-p1 h4{
+    text-shadow: -5px 3px 1px var(--primary);
+}
+
+.about .content .c-p2 h4{
+    text-shadow: 5px 3px 1px var(--primary);
+}
+
+.about .content p{
+    font-size: 0.9em;
+}
+
+.about .about-skills h4{
+    color: var(--bg);
+    font-size: 2em;
+    padding-bottom: 0.8rem;
+    text-shadow: 0px -5px 2px var(--primary);
+    text-align: center;
+}
+/* Section About End */
+
+/* ========================================================================================================== */
+
+/* Section Skills Start */
+
+.skills{
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+
+/* Section Skills End */
