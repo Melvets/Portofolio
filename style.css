@@ -19,7 +19,14 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--white);
     background-color: var(--white);
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE dan Edge */
+    scrollbar-width: none;  /* Firefox */
     /* min-height: 20000px; */
+}
+
+body::-webkit-scrollbar{
+  display: none;
 }
 
 html{
@@ -808,6 +815,222 @@ article {
   }
 
 /* Section Blog End */
+
+/* ========================================================================================================== */
+
+/* Section Contact Start */
+
+.contact{
+    /* min-height: 100vh; */
+    background-image: url(img/bg-pattern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 7% 1.4rem;
+}
+
+.contact h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.3rem;
+}
+
+.contact h2 span{
+    color: var(--primary);
+}
+
+.contact .coloumn-contact{
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    padding: 2rem;
+    /* margin: 7% 1% 7% 7%; */
+    /* padding: 3% 5%; */
+    border-radius: 2rem;
+    outline: 3px solid var(--bg);
+    box-shadow: 1px 1px 10px var(--primary);
+    background-color: var(--bg);
+    margin-bottom: 2.7rem;
+}
+
+.contact .coloumn-contact .box-contact{
+  /* margin: 2rem; */
+}
+
+.contact .coloumn-contact .input-contact{
+  position: relative;
+  padding: 15px 0 0;
+  padding-bottom: .5rem;
+}
+
+.input-field{
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  border-bottom: 2px solid #6f7e8c;
+  outline: 0;
+  font-size: 16px;
+  color: var(--darkprimary);
+  background-color: var(--bg);
+  padding: 4px 0;
+  padding-right: 32px;
+}
+
+.input-field::placeholder{
+  color: transparent;
+}
+
+.input-field:placeholder-shown ~ .input-label{
+  font-size: 16px;
+  cursor: text;
+  color: #6f7e8c;
+  top: 20px;
+}
+
+label, .input-field:focus ~ .input-label{
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 14px;
+  left: -1px;
+  color: #6f7e8c;
+  transition: 0.3s;
+}
+
+.input-field:focus ~ .input-label{
+  color: var(--primary);
+}
+
+.input-field:focus{
+  border-bottom: 2px solid var(--primary);
+}
+
+button{
+  width: 100%;
+  padding: 8px;
+  background-color: var(--primary);
+  color: var(--bg);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--darkprimary);
+}
+
+/* Section Contact End */
+
+/* ========================================================================================================== */
+
+/* Footer Start */
+
+footer{
+    background-color: var(--primary);
+}
+
+footer a,p{
+    /* color: #000; */
+}
+
+/* socials */
+  .svg--source1 {
+    display: none
+  }
+  
+  .svg--icon1 {
+    width: 100%;
+    max-width: 2.5rem;
+    height: 100%;
+    max-height: 2.5rem;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+  }
+  
+  .wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+  }
+  
+  .share1 {
+    width: 2rem;
+    height: 2rem;
+    float: left;
+    margin: .2rem .5rem .2rem 0;
+    background-color: var(--primary);
+    border: 2px solid var(--bg);
+    box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+    border-radius: 50%;
+    transition: 250ms;
+    position: relative;
+    
+    &:last-child {
+      margin-right: 0
+    }
+    
+    &:hover,&:focus {
+      /* background: var(--bg); */
+      outline: 2.5px solid var(--bg);
+      outline-offset: 1.5px;
+      border: none;
+    }
+    
+    &:focus {
+      outline-color: inherit;
+    }
+  }
+  
+  .icons1 {
+    &:hover,
+    &:focus {
+      color: var(--bg);
+      box-shadow: 0 0 15px 0 var(--bg);
+    }
+  }
+
+/* links */
+footer .links{
+  text-align: center;
+  font-size: .8em;
+  color: var(--bg);
+}
+
+footer .links a{
+  color: var(--bg);
+}
+
+footer .links a:hover{
+  text-decoration: underline;
+}
+
+/* credit */
+footer .credit{
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: .8rem;
+}
+
+footer .credit p{
+  color: var(--bg);
+}
+
+footer .credit p a {
+  color: #ff1f1f;
+  font-style: oblique;
+}
+
+footer .credit p a:hover{
+  text-decoration: underline;
+}
+
+
+/* Footer End */
 
 /* ========================================================================================================== */
 
